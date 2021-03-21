@@ -1,0 +1,12 @@
+@import "./Theme.scss";
+
+body,html{
+  margin:0;
+  padding:0;
+}
+.App {
+  background-color: black; //$gray
+  width: 100vw;
+  height: 100vh;
+  
+}
