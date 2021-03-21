@@ -1,0 +1,47 @@
+@import "./Theme.scss";
+$font:"Roboto";
+$padding-left10:10px;
+
+.pokemon-card{
+    background-color: #ffffff;
+    width:210px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+
+    .pokemon-photo{
+    display:flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $card_gray;
+    width: 180px;
+    height: 150px;
+    margin:10px;
+    img{
+    padding-top:10px;
+    }
+
+    }
+    .pokemon-id{
+    color:$card_darkgray;
+    padding-left:$padding-left10;
+    font-family:$font;
+    font-weight: bold;
+    font-size: small;
+    }
+    .pokemon-name{
+    padding-left:$padding-left10;
+    font-size:22px;
+    font-family: $font;
+    font-weight: bold;
+    }
+    .pokemon-types{
+    padding-top:5px;
+    display:flex;
+    justify-content:flex-start;
+    padding-left: $padding-left10;
+    .second-type{
+        padding-left: 3px;
+    }
+    }
+}
