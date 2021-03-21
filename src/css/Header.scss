@@ -1,0 +1,29 @@
+@import "./Theme.scss";
+
+.header{
+    background-color:$darkblue;
+    display:flex;
+    font-family: "Roboto";
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 3px solid red;
+
+    .header-title{
+        display: flex;
+        align-items: center;
+    }
+    .header-title>span{
+       font-size:x-large;
+       padding-left:10px;
+    }
+    .header-search{
+    padding-right: 10px;
+    }
+    .header-search-button{
+    padding: 8px; 
+    margin-left:5px;
+    width:50px;
+    }
+}
