@@ -1,0 +1,50 @@
+@import "./Theme.scss";
+$border:1px solid black;
+
+.footer-container {
+    display: flex;
+    background-color: $footer-background;
+    height: 200px;
+    width: 100vw;
+    color: white;
+
+    .footer {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .footer-left {
+        border-right: $border;
+        span {
+            font-size: x-large;
+        }
+    }
+
+    .footer-center {
+        span {
+            font-size: x-large;
+        }
+        .footer-center-icons{
+            display:flex;
+            justify-content: space-between;
+            width:100%;
+            img{
+                width:40px;
+                height:40px;
+                cursor:pointer
+            }
+        }
+    }
+
+    .footer-right {
+        border-left: $border;
+        a{
+            text-decoration: none;
+            color:white;
+        }
+    }
+}

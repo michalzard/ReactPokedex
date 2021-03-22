@@ -1,29 +1,33 @@
 @import "./Theme.scss";
 
-.header{
-    background-color:$darkblue;
-    display:flex;
+.header {
+    background-color: $darkblue;
+    display: flex;
     font-family: "Roboto";
-    color:white;
+    color: white;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    border-bottom: 3px solid red;
+    border-bottom: 4px solid red;
+    border-radius: 00px 0px 20px 20px;
 
-    .header-title{
+    .header-title {
         display: flex;
         align-items: center;
     }
-    .header-title>span{
-       font-size:x-large;
-       padding-left:10px;
+
+    .header-title>span {
+        font-size: x-large;
+        padding-left: 10px;
     }
-    .header-search{
-    padding-right: 10px;
+
+    .header-search {
+        padding-right: 10px;
     }
-    .header-search-button{
-    padding: 8px; 
-    margin-left:5px;
-    width:50px;
+
+    .header-search-button {
+        padding: 8px;
+        margin-left: 5px;
+        width: 50px;
     }
 }
