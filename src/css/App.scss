@@ -1,12 +1,23 @@
 @import "./Theme.scss";
 
-body,html{
-  margin:0;
-  padding:0;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
+
 .App {
-  background-color: black; //$gray
+  background-color: $background; //$gray
   width: 100vw;
   height: 100vh;
-  
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.App::-webkit-scrollbar {
+  background-color: $background;
+  width: 8px;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb;
 }
