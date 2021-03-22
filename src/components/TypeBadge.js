@@ -32,6 +32,7 @@ const BadgeTheme={
     ice:"#51c4e7",
     rock:"#a38c21",
     water:"#4592c4",
+    bug:"darkgreen"
 
 }
 export {TypeBadge,BadgeTheme}
