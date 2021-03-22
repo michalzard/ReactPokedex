@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import CardContainer from './components/CardContainer';
 import PokeProfile from "./components/PokemonProfile";
 
+
 function App() {
   return (
     <Router>
@@ -12,8 +13,8 @@ function App() {
     <Header/>
     <Switch>
     
-    <Route path="/pokemon/firesaur">
-    <PokeProfile/>
+
+    <Route path="/pokemon/:id/:name" children={<PokeProfile />}>
     </Route>
 
     <Route path="/">
