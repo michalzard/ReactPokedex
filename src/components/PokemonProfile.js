@@ -10,7 +10,10 @@ function PokemonProfile() {
     const {name,id} =useParams();
     const [types,setTypes]=useState([]);
     const [stats,setStats]=useState([]);
-    
+    const [weight,setWeight]=useState('');
+    const [height,setHeight]=useState('');
+    const [abilities,setAbilities]=useState([]);
+
     let isMounted=useRef(true);
 
 
@@ -21,7 +24,9 @@ function PokemonProfile() {
         if(isMounted.current){
         setStats(res.stats);
         setTypes(res.types);
-            
+        setWeight(res.weight);
+        setHeight(res.height);
+        setAbilities(res.abilities);
         const c=document.createElement("canvas");
         const ctx=c.getContext("2d");    
         let labelNames=res.stats.map((item)=>{return item.stat.name});
@@ -32,7 +37,7 @@ function PokemonProfile() {
         data:{
             labels:labelNames,
             datasets:[{
-                label: "Firesaur Statistics",
+                label: `${name.charAt(0).toUpperCase()+name.replace(name.charAt(0),"")} Statistics`,
                 data:dataValues,
                 fill:true,
                 backgroundColor:[
@@ -68,17 +73,16 @@ function PokemonProfile() {
         </div>
         <div className="pokemon-desc">
         Description about pokemon that is currently being displayed
-       
         <div className="pokemon-stats">
         <div className="left">
-        Height <span>2' 04"</span>
-        Weight<span>15.2 lbs</span> 
-        Gender<span>icons</span> 
+        Height<span>{height} m</span>
+        Weight<span>{(weight/2.2046).toFixed(0)} kg({weight} lb)</span> 
         </div>
         <div>
         <div className="right">
-        Category<span>Something</span> 
-        Abilities<span>Fireslash</span>
+        Abilities<span>
+        {abilities.map((a,i)=>{return<AbilityElement key={i} name={a.ability.name} />})}
+        </span>
         </div>
         </div>
         </div>
@@ -96,3 +100,7 @@ function PokemonProfile() {
 }
 
 export default PokemonProfile
+
+function AbilityElement({name}){
+return(<p>{name}</p>)
+}

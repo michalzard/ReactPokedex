@@ -4,7 +4,7 @@ $border:1px solid black;
 .footer-container {
     display: flex;
     background-color: $footer-background;
-    height: 200px;
+    height: 150px;
     width: 100vw;
     color: white;
 
@@ -12,39 +12,60 @@ $border:1px solid black;
         width: 100vw;
         display: flex;
         justify-content: space-evenly;
-
-        margin-left: 200px;
-        margin-right: 200px;
     }
 
     .footer-left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left:10px;
+        text-overflow: ellipsis;
+        overflow-y: scroll;
+        max-width: 1500px;
         border-right: $border;
+
         span {
             font-size: x-large;
         }
     }
 
-    .footer-center {
-        span {
-            font-size: x-large;
-        }
-        .footer-center-icons{
-            display:flex;
-            justify-content: space-between;
-            width:100%;
-            img{
-                width:40px;
-                height:40px;
-                cursor:pointer
-            }
-        }
+    .footer-left::-webkit-scrollbar {
+        background-color:$footer-background;
+        width: 8px;
+    }
+
+    .footer-left::-webkit-scrollbar-thumb {
+        background-color: $footer-background;
     }
 
     .footer-right {
-        border-left: $border;
-        a{
-            text-decoration: none;
-            color:white;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        max-width: 400px;
+        span {
+            font-size: x-large;
+        }
+        .footer-center-icons {
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            padding-top:30px;
+            width:100%;
+            img {
+                width: 40px;
+                height: 40px;
+                cursor: pointer
+            }
+            a{
+                text-decoration: none;
+                color:white;
+                font-size: larger;
+                :hover{
+                    color:red;
+                }
+            }
         }
     }
 }

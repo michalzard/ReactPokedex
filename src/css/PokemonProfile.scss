@@ -21,8 +21,8 @@ $leftP:10px;
         flex-direction: column;
         flex: 1;
         background-color: white;
-        max-width: 1014px;
-
+        max-width: 860px;
+        padding:20px;
         .pokemon-title {
             display: flex;
             justify-content: center;
@@ -89,8 +89,10 @@ $leftP:10px;
                         font-size: 20px;
                         color: white;
 
-                        span {
+                        p {
+                            margin:0;
                             color: black;
+                            font-size: 21px;
                         }
                     }
                 }
