@@ -7,13 +7,13 @@ function PokemonCard({id,photo,name,badges}) {
     return (
       
         <div className="pokemon-card">
-        <div className="pokemon-photo"><img src={photo} width={120} height={120}></img></div>
-        <div className="pokemon-id">#{id}</div>
-        <div className="pokemon-name">
+        <div className="pokemon-photo">
         <Link to={`/pokemon/${name}`} style={{textDecoration:"none"}}>
-        {name}
+        <img src={photo} width={120} height={120} alt=""></img>
         </Link>
         </div>
+        <div className="pokemon-id">#{id}</div>
+        <div className="pokemon-name">{name}</div>
         <div className="pokemon-types">
         <Link to={`/types/grass`} style={{textDecoration:"none"}}>
         <Badge typeName="grass" color={BadgeTheme["grass"]}/>
