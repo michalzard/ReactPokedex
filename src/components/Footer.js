@@ -15,12 +15,12 @@ function Footer() {
         <div className="footer-center">
         <span>SOCIALS</span>
         <div className="footer-center-icons">
-        <a target="_blank" href="https://github.com/MichalPlatko/"><img src={Github} alt="Author's Github"></img></a>
-        <a target="_blank" href="https://twitter.com/"><img src={Twitter} alt="Author's Twitter"></img></a>
+        <a target="_blank" href="https://github.com/MichalPlatko/" rel="noreferrer"><img src={Github} alt="Author's Github"></img></a>
+        <a target="_blank" href="https://twitter.com/" rel="noreferrer"><img src={Twitter} alt="Author's Twitter"></img></a>
         </div>
         </div>
         <div className="footer-right">        
-        <h4> <a target="_blank" href="https://github.com/MichalPlatko/"> ©2021 Michal Platko</a></h4>
+        <h4> <a target="_blank" href="https://github.com/MichalPlatko/" rel="noreferrer"> ©2021 Michal Platko</a></h4>
         
         </div>
         </div>
