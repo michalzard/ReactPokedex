@@ -1,20 +1,30 @@
 import './css/App.scss';
 import Header from "./components/Header";
-import PokemonCard from "./components/PokemonCard";
-import {BrowserRouter as Router} from "react-router-dom";
-import Logo from "./assets/p.png";
+import Footer from "./components/Footer";
+import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
+import CardContainer from './components/CardContainer';
+import PokeProfile from "./components/PokemonProfile";
 
 function App() {
   return (
     <Router>
-
     <div className="App">
     <Header/>
-    <PokemonCard id="002" photo={Logo} name="Firesaur" badges={{type:"flying"}}/>
-    </div>
+    <Switch>
+    
+    <Route path="/pokemon/firesaur">
+    <PokeProfile/>
+    </Route>
 
+    <Route path="/">
+    <CardContainer/>   
+    </Route>
+    </Switch>
+    <Footer/>
+    </div>
     </Router>
   );
 }
 
 export default App;
+
