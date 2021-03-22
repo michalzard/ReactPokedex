@@ -9,7 +9,7 @@ function TypeBadge({typeName,color,fontColor}) {
         background: typeof color==='string' ? color : `-webkit-linear-gradient(90deg,${color.first} 50%,${color.second} 50%)`
         
         }}>
-        <div className="badge-name" style={{color:fontColor | "white"}}>{typeName}</div>
+        <div className="badge-name" style={{color:fontColor || "white"}}>{typeName}</div>
         </div>
     )
 }
