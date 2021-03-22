@@ -6,9 +6,8 @@ import SearchIcon from '@material-ui/icons/SearchSharp';
 function Header() {
     return (
         <div className="header">
-        <div className="header-logo"></div>
+        <div className="header-logo"><a href="/" ><img src={Pokeball} alt="logo" width={40}></img></a></div>
         <div className="header-title">
-        <img src={Pokeball} alt="logo" width={40}></img>
         <span>Poké Catalog</span>
         </div>
         <div className="header-search"><TextField color="secondary" placeholder="Pokémon name,type,ability"

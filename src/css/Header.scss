@@ -11,16 +11,14 @@
     border-bottom: 4px solid red;
     border-radius: 00px 0px 20px 20px;
 
-    .header-title {
-        display: flex;
-        align-items: center;
+    .header-title{
+    padding-left: 200px;
+    font-weight: bold; 
+    font-size: 30px;
     }
-
-    .header-title>span {
-        font-size: x-large;
-        padding-left: 10px;
+    .header-logo{
+        padding-left:20px;
     }
-
     .header-search {
         padding-right: 10px;
     }
