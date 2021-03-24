@@ -7,17 +7,8 @@ html {
 }
 
 .App {
-  background-color: $background; //$gray
+  background-color: $card_gray;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  overflow-y: scroll;
-}
-.App::-webkit-scrollbar {
-  background-color: $background;
-  width: 8px;
-}
-
-.App::-webkit-scrollbar-thumb {
-  background-color: $scrollbar-thumb;
 }
