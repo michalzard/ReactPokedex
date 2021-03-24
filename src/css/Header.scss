@@ -10,7 +10,10 @@
     height: 60px;
     border-bottom: 4px solid red;
     border-radius: 00px 0px 20px 20px;
-
+    a{
+        text-decoration: none;
+        color: white;
+    }
     .header-title{
     padding-left: 200px;
     font-weight: bold; 
