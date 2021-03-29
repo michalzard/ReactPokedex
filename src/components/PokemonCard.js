@@ -8,19 +8,22 @@ function PokemonCard({id,photo,name}) {
     let isMounted=useRef(true);
 
     useEffect(()=>{
+    async function fetchPokeData(){
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(res=>res.json()).then(res=>{
             if(isMounted.current) setTypes(res.types);
             //Save to local sotrage cuz shit expensive to fetch all the time
-    })
+    }).catch(err=>console.log(err));
     return ()=>{isMounted.current=false;}
+    }
+    fetchPokeData();
     },[name])
 
     return (
         
         <div className="pokemon-card">
         <div className="pokemon-photo">
-        <Link to={`/pokemon/${id}/${name}`} style={{textDecoration:"none"}}>
+        <Link target="_blank" to={`/pokemon/${id}/${name}`} style={{textDecoration:"none"}}>
         <img src={photo} width={120} height={120} alt=""></img>
         </Link>
         </div>

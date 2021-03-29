@@ -17,19 +17,22 @@ function CardContainer() {
     //const [input,setInput] = useState("");
     let isMounted=useRef(true);
     useEffect(()=>{
-    if(!localStorage.getItem("pokemon")){
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=492")
-    .then(res=>res.json()).then(res=>{
-            if(isMounted.current){
-                setResults(res.results);
-                localStorage.setItem("pokemon",JSON.stringify(res.results))
-                console.log("results fetched & saved")
-            }
-    })}else {
-        setResults(JSON.parse(localStorage.getItem("pokemon")))
-        console.log("results loaded")
+    async function fetchPokeData(){
+        if(!localStorage.getItem("pokemon-v2")){
+            await fetch("https://pokeapi.co/api/v2/pokemon?limit=898")
+            .then(res=>res.json()).then(res=>{
+                    if(isMounted.current){
+                        setResults(res.results);
+                        localStorage.setItem("pokemon-v2",JSON.stringify(res.results))
+                    }
+    }
+    
+    )}else {
+        setResults(JSON.parse(localStorage.getItem("pokemon-v2")))
     }
     return ()=>{isMounted.current=false;}
+    }
+    fetchPokeData();
     },[])
 
     return (

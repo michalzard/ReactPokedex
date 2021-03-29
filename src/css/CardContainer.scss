@@ -8,7 +8,8 @@
     height: 100vh;
     min-height: 100vh;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y:scroll;
+    overflow-x: hidden;
     padding-bottom: 200px;
     .cards-catalog {
         background-color: $card_gray;
@@ -22,17 +23,17 @@
     }
 }
 .cards-container::-webkit-scrollbar {
-    display:block;
-    background-color: $scrollbar;
     width: 10px;
 }
 
 .cards-container::-webkit-scrollbar-thumb {
     background-color: $scrollbar-thumb;
-    border-radius: 20px 20px 20px 20px;
-    height: 40vh;
+}
+.cards-container::-webkit-scrollbar-track {
+    margin-bottom: 400px;
 }
 
 /*
-* PUT PADDING ON BOTTOM OF THE SCROLLBAR SO IT DOESNT GO
+* FIX
+SCROLL OVERLAY OR OTHER TECHNIQUE,FOOTER HAS SPACE ON RIGHT SIDE
 */
