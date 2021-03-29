@@ -76,7 +76,7 @@ function PokemonProfile() {
         <div className="pokemon-stats">
         <div className="left">
         Height<span>{height} m</span>
-        Weight<span>{(weight/2.2046).toFixed(0)} kg({weight} lb)</span> 
+        Weight<span>{(weight/2.2046).toFixed(0)} kg ({weight} lb)</span> 
         </div>
         <div>
         <div className="right">
