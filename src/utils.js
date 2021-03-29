@@ -3,7 +3,7 @@ function importAll(r) {
   }
   
 function getImagesByName(name){
-const images = importAll(require.context('./assets/pokemon', false, /\.(ico)$/));
+const images = importAll(require.context('./assets/pokemon', false, /\.(png)$/));
 for(let i=0;i<images.length;i++){
     if(images[i].default.toLowerCase().includes(name)){
         return images[i].default;
