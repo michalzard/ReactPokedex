@@ -22,7 +22,7 @@ function Footer() {
         <div className="footer-center-icons">
         <a target="_blank" href="https://github.com/MichalPlatko/" rel="noreferrer"><img src={Github} alt="Author's Github"></img></a>
         <a target="_blank" href="https://twitter.com/" rel="noreferrer"><img src={Twitter} alt="Author's Twitter"></img></a>
-        <a target="_blank" href="https://github.com/MichalPlatko/" rel="noreferrer"> 
+        <a href="/" rel="noreferrer"> 
         ©2021 MichalZard</a>
         </div>
         </div>

@@ -36,9 +36,3 @@ function Header() {
 }
 
 export default Header
-
-//GETTING 404s on slowpoke/cleffa/steelix
-
-//FIX SCROLL
-
-//CHANGE FOOTER TO SHOW UP UNDER POKEMON CONTAINER
