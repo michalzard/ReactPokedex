@@ -23,7 +23,7 @@ function PokemonCard({id,photo,name}) {
         
         <div className="pokemon-card">
         <div className="pokemon-photo">
-        <Link target="_blank" to={`/pokemon/${id}/${name}`} style={{textDecoration:"none"}}>
+        <Link to={`/pokemon/${id}/${name}`} style={{textDecoration:"none"}}>
         <img src={photo} width={120} height={120} alt=""></img>
         </Link>
         </div>
