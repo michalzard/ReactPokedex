@@ -37,10 +37,18 @@ function CardContainer() {
         <div className="cards-container">
         <div className="cards-catalog-left"></div>
         <div className="cards-catalog">
-        {results.slice(0,visibleResults).map((result,i)=>{
-        return  result.name.includes(inputFromRedux.payload.searchInput) ?
-        <PokemonCard key={i} id={i}
-        photo={getImagesByName(result.name)} name={result.name}/> : null})}  
+        {
+        inputFromRedux.payload.searchInput ? 
+        results.map((result,i)=>{
+            return  result.name.includes(inputFromRedux.payload.searchInput) ?
+            <PokemonCard key={i} id={i}
+            photo={getImagesByName(result.name)} name={result.name}/> : null})
+        :
+        results.slice(0,visibleResults).map((result,i)=>{
+            return  result.name.includes(inputFromRedux.payload.searchInput) ?
+            <PokemonCard key={i} id={i}
+            photo={getImagesByName(result.name)} name={result.name}/> : null})
+        }
         {inputFromRedux.payload.searchInput.length>0 || visibleResults>=maxVisibleResults ? null :
         <Button color="secondary" variant="contained" size="large" onClick={loadMore}>LOAD MORE</Button>}
         </div>
