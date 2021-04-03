@@ -3,7 +3,7 @@
 
 ## Features
 * Webpage displaying container over 800 pokemons with **HD images**
-* Searchbar wich lets you filter trough pokemons to display ones starting with your input
+* Searchbar which lets you filter trough pokemons to display ones starting with your input
 * Load more button do display more pokemons on the page **Default 32**
 * Loading more expands catalog by **Default 48**
 
